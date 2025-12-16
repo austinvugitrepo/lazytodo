@@ -20,7 +20,8 @@ The lazily built todo app written in Rust
 
 ## Implementation:
 
-- run the program via command line
+- make a loop to ensure app runs until user types "exit", otherwise any input is writing to todo
+
 
 
 
