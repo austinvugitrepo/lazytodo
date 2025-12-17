@@ -62,5 +62,25 @@ docker run -it --name lazytodo lazytodo:v0.1.6
 
 then follow "Using this application section" above
 
+# Seeing your todo list in real time (please still be in todo subdirectory):
+
+## On a second shell on Unix/Linux:
+
+```bash
+tail -f lazytodo.txt
+```
+
+## On a second shell on Windows:
+
+```powershell
+Get-Content lazytodo.txt -Wait
+```
+
+## While the Docker container is running in a different shell:
+
+```bash
+docker exec -it lazytodo /bin/bash
+tail -f lazytodo.txt
+```
 
 
