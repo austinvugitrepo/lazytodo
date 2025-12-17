@@ -21,9 +21,46 @@ The lazily built todo app written in Rust
 ## Implementation:
 
 - make a loop to ensure app runs until user types "exit", otherwise any input is writing to todo
+- check for file existence and make a todo file for writing
+- if user does not type "exit", write to the todo file: lazytodo.txt (will append to this file if it exists)
 
+# Running this code:
 
+## Preparation
 
+```bash
+git clone https://gitlab.com/austinvugitrepo/lazytodo.git
+```
+
+```bash
+cd lazytodo
+```
+
+```bash
+cd todo
+```
+
+## Using this application (please have rust installed otherwise check below for docker support)
+
+```rust
+cargo run
+```
+
+# Docker support:
+
+## building the container:
+
+```bash
+docker build -t lazytodo:v0.1.6 .
+```
+
+## running the container for the first time:
+
+```bash
+docker run -it --name lazytodo lazytodo:v0.1.6
+```
+
+then follow "Using this application section" above
 
 
 
