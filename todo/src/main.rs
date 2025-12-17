@@ -1,9 +1,14 @@
 use std::io;
 use std::io::Write;
 use std::fs::File;
-
+use std::path::Path; 
 fn main() -> std::io::Result<()> {
-    File::create_new("lazytodo.txt")?; // make todo file 
+    let todofile = "lazytodo.txt";
+    let filepath = Path::new(todofile);
+
+    if !filepath.exists(){
+     File::create_new("lazytodo.txt")?; // make todo file 
+    }
     println!("Type 'exit' to exit the program");
  loop {
     let mut input = String::new();
